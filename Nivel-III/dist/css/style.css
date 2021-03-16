@@ -1,0 +1,98 @@
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffcccc;
+}
+.container .main-title {
+  margin-block-end: 0.5em;
+  font-size: 3vw;
+}
+
+.boxResult {
+  width: 100%;
+  margin-bottom: 2em;
+  display: grid;
+  grid-template-columns: 10% repeat(3, 1fr) 10%;
+  grid-template-rows: 5% repeat(4, 2fr), 5%;
+}
+.boxResult .item-1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #ff3838;
+}
+.boxResult .item-2 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #18dcff;
+}
+.boxResult .item-3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: #00ff5e;
+}
+.boxResult .item-4 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: #4b4b4b;
+}
+.boxResult .item-4,
+.boxResult .item-5 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.boxResult .item-5 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  background-color: #ff9f1a;
+}
+
+.result {
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.result p {
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+[class^=item-] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+[class^=item-] .title {
+  color: white;
+  margin-block-start: 0.5rem;
+  font-size: 2rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  margin-block-end: 1rem;
+  border-radius: 15px;
+  background-color: #2f4fdd;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
+.btn:hover {
+  color: black;
+}/*# sourceMappingURL=style.css.map */

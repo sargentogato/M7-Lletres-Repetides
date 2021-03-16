@@ -1,0 +1,102 @@
+@import "./config/colors";
+@import "./config/mixins";
+
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $bgColor;
+
+  .main-title {
+    margin-block-end: 0.5em;
+    font-size: 3vw;
+  }
+}
+
+.boxResult {
+  width: 100%;
+  margin-bottom: 2em;
+
+  display: grid;
+  grid-template-columns: 10% repeat(3, 1fr) 10%;
+  grid-template-rows: 5% repeat(4, 2fr), 5%;
+
+  .item-1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: $colorOne;
+  }
+
+  .item-2 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    background-color: $colorTwo;
+  }
+
+  .item-3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: $colorThree;
+  }
+
+  .item-4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: $colorFour;
+  }
+
+  .item-4,
+  .item-5 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .item-5 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    background-color: $colorFive;
+  }
+}
+
+.result {
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1em;
+  }
+}
+
+[class^="item-"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+
+  .title {
+    color: white;
+    margin-block-start: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+.btn {
+  @include btn;
+}
