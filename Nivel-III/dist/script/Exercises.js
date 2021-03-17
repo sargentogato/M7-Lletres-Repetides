@@ -50,13 +50,14 @@ export default class Excercises {
 
   taskThree() {
     let result = {}
-    for (const arrayElement of this.arrayName) {
-      if (!result[arrayElement]) {
-        result[arrayElement] = 1
+
+    this.arrayName.map((element) => {
+      if (!result[element]) {
+        result[element] = 1
       } else {
-        result[arrayElement]++
+        result[element]++
       }
-    }
+    })
     this.message = JSON.stringify(result)
 
     this.drawer.displayTask(this.eventTriggered, this.message)

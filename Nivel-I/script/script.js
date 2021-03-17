@@ -1,54 +1,55 @@
-/* 
+/*
  * Ejercicios 1
  */
 
-const arr = ['M', 'A', 'R', 'L', 'O','N']
+const arr = ["M", "A", "R", "L", "O", "N"]
 
 for (const iterator of arr) {
   console.log(iterator)
 }
 
-/* 
+/*
  * Ejercicios 2
  */
+console.log("=================Ejercicio 2================")
 
-const vowels = ['A', 'E', 'I', 'O', 'U']
+const vowels = ["A", "E", "I", "O", "U"]
 
 for (const iterator of arr) {
   const vowelMessage = "He encontrado la VOCAL"
   const consonantMessage = "He encontrado la CONSONANTE"
   const callback = (letter) => letter === iterator
 
-  if(vowels.some(callback)){
+  if (vowels.some(callback)) {
     console.log(`${vowelMessage} ${iterator}`)
-  }else{
+  } else {
     console.log(`${consonantMessage} ${iterator}`)
   }
 }
 
-/* 
+/*
  * Ejercicios 3
  */
 
+console.log("=================Ejercicio 3================")
+
 const result = {}
-const arr2 = ['M', 'A', 'R', 'L', 'O','N']
+const arr2 = ["M", "A", "R", "L", "O", "N"]
 
-for (const iterator of arr2) {
-  //Es diferente result[iterator] a lo que hay en el objeto = true
-  if(!result[iterator]){
-    result[iterator] = 1
-  }else{
-/*Cuando el resultado sea falso, al ser un objeto el que estamos accediendo, si result[iterator], ya está dentro del objeto, le agregará un número más */
-    result[iterator]++
+arr2.map((element) => {
+  if (!result[element]) {
+    result[element] = 1
+  } else {
+    result[element]++
   }
-}
-
+})
 console.log(result)
 
-/* 
+/*
  * Ejercicios 4
  */
+console.log("=================Ejercicio 4================")
 
-const arrCognom = ['V', 'E', 'L', 'A', 'S', 'Q', 'U', 'E', 'Z'] 
+const arrCognom = ["V", "E", "L", "A", "S", "Q", "U", "E", "Z"]
 const fullName = [arr, arrCognom].join('" "')
 console.log(fullName)
